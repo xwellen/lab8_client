@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.MainStageController">
+   <Pane prefHeight="75.0" prefWidth="120.0" style="-fx-background-color: #e57f31#e57f31; " AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text layoutX="1.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Study" wrappingWidth="90.24800109863281">
+         <font>
+            <Font name="Avenir Next Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grou" wrappingWidth="90.24800109863281">
+         <font>
+            <Font name="Avenir Next Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="67.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P" wrappingWidth="90.24800109863281">
+         <font>
+            <Font name="Avenir Next Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="roject" wrappingWidth="90.24800109863281">
+         <font>
+            <Font name="Avenir Next Bold" size="16.0" />
+         </font>
+      </Text>
+   </Pane>
+   <Pane prefWidth="120.0" style="-fx-background-color: #293541#293541;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="75.0">
+      <Button fx:id="toTableBtn" layoutY="1.0" mnemonicParsing="false" onAction="#showTable" prefHeight="55.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="К таблице" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="toGroupMapBtn" layoutX="1.0" layoutY="57.0" mnemonicParsing="false" onAction="#showGroupMap" prefHeight="55.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Карта групп" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="executeCommandsBtn" layoutX="1.0" layoutY="112.0" mnemonicParsing="false" onAction="#showExecuteCommand" prefHeight="55.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Исполнить команду" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="aboutFagotsBtn" layoutY="183.0" mnemonicParsing="false" onAction="#showAboutFagots" prefHeight="55.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="О разработчиках" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+      </Button>
+   </Pane>
+   <Pane prefHeight="75.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text fx:id="hiText" fill="#3f96cd" layoutX="71.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Привет, USERLOGIN" wrappingWidth="337.2480010986328">
+         <font>
+            <Font name="Avenir Next Bold" size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="setRu" layoutX="608.0" layoutY="22.0" mnemonicParsing="false" onAction="#setRuLanguage" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@Images/Flags/russia-flag-16x16.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="setFr" layoutX="662.0" layoutY="26.0" mnemonicParsing="false" onAction="#setFrLanguage" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@Images/Flags/france-flag-icon-16.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="setNo" layoutX="635.0" layoutY="26.0" mnemonicParsing="false" onAction="#setNoLanguage" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@Images/Flags/norway-flag-icon-16.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="setEsNI" layoutX="689.0" layoutY="26.0" mnemonicParsing="false" onAction="#setEsNILanguage" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@Images/Flags/nicaragua-flag-icon-16.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+   </Pane>
+   <Pane style="-fx-background-color: gainsboro;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+      <Pane fx:id="groupMap" visible="false" />
+      <Pane fx:id="tablePane">
+         <TableView fx:id="tableView" layoutX="2.0" layoutY="25.0" style="-fx-background-radius: 1em; -fx-background-color: gainsboro gainsboro;" AnchorPane.bottomAnchor="0.0">
+            <columns>
+               <TableColumn fx:id="idColumn" prefWidth="38.0" text="id" />
+               <TableColumn fx:id="nameColumn" prefWidth="98.66665649414062" text="name" />
+               <TableColumn prefWidth="52.0" text="x" fx:id="xColumn" />
+               <TableColumn fx:id="yColumn" prefWidth="34.522308349609375" text="y" />
+               <TableColumn fx:id="creationDateColumn" prefWidth="145.3333740234375" text="creationDate" />
+               <TableColumn fx:id="studentsCountColumn" prefWidth="94.0" text="studentsCount" />
+               <TableColumn fx:id="formOfEducationColumn" prefWidth="114.6666259765625" text="formOfEducation" />
+               <TableColumn fx:id="semesterEnumColumn" prefWidth="90.0" text="semesterEnum" />
+               <TableColumn fx:id="adminNameColumn" prefWidth="84.6666259765625" text="adminName" />
+               <TableColumn fx:id="heightColumn" prefWidth="69.33331298828125" text="height" />
+               <TableColumn fx:id="eyeColorColumn" prefWidth="81.33331298828125" text="eyeColor" />
+               <TableColumn fx:id="hairColorColumn" prefWidth="83.333251953125" text="hairColor" />
+               <TableColumn fx:id="nationalityColumn" prefWidth="88.6666259765625" text="nationality" />
+            </columns>
+         </TableView>
+         <TextField fx:id="idFilter" layoutY="1.0" prefHeight="25.0" prefWidth="39.0" promptText="id" />
+         <TextField fx:id="nameFilter" layoutX="39.0" layoutY="1.0" prefHeight="25.0" prefWidth="99.0" promptText="name" />
+         <TextField layoutX="138.0" layoutY="1.0" prefHeight="25.0" prefWidth="52.0" promptText="x" fx:id="xFilter" />
+         <TextField fx:id="yFilter" layoutX="190.0" layoutY="1.0" prefHeight="25.0" prefWidth="33.0" promptText="y" />
+         <TextField fx:id="creationDateFilter" layoutX="223.0" layoutY="1.0" prefHeight="25.0" prefWidth="144.0" promptText="creationDate" />
+         <TextField fx:id="studentsCountFilter" layoutX="367.0" layoutY="1.0" prefHeight="25.0" prefWidth="99.0" promptText="studentsCount" />
+         <ChoiceBox fx:id="formOfEducationFilter" layoutX="464.0" layoutY="1.0" prefHeight="25.0" prefWidth="108.0" />
+         <ChoiceBox fx:id="semesterEnumFilter" layoutX="572.0" layoutY="1.0" prefHeight="25.0" prefWidth="99.0" />
+         <TextField fx:id="adminNameFilter" layoutX="671.0" layoutY="1.0" prefHeight="25.0" prefWidth="83.0" promptText="adminName" />
+         <TextField fx:id="heightFilter" layoutX="754.0" layoutY="1.0" prefHeight="25.0" prefWidth="70.0" promptText="height" />
+         <ChoiceBox fx:id="eyeColorFilter" layoutX="824.0" layoutY="1.0" prefHeight="25.0" prefWidth="83.0" />
+         <ChoiceBox fx:id="hairColorFilter" layoutX="907.0" layoutY="1.0" prefHeight="25.0" prefWidth="83.0" />
+         <ChoiceBox fx:id="nationalityFilter" layoutX="989.0" layoutY="1.0" prefHeight="25.0" prefWidth="90.0" />
+      </Pane>
+      <Pane fx:id="executeCommand" prefHeight="425.0" prefWidth="1078.0" visible="false">
+         <TitledPane fx:id="aboutGroupTitiledPane" disable="true" layoutX="50.0" layoutY="100.0" prefHeight="234.0" prefWidth="332.0" text="Информация о группе">
+            <VBox prefHeight="218.0" prefWidth="330.0" spacing="10.0">
+               <TextField fx:id="groupNameField" prefHeight="27.0" prefWidth="334.0" promptText="Введите имя группы" style="-fx-background-radius: 1em;" />
+               <HBox prefHeight="30.0" prefWidth="293.0" spacing="3.0">
+                  <TextField prefHeight="27.0" prefWidth="165.0" promptText="Введите X (max = 531)" style="-fx-background-radius: 1em;" fx:id="xTextField" />
+                  <TextField fx:id="yTextField" prefHeight="27.0" prefWidth="165.0" promptText="Введите Y (min = -653.0)" style="-fx-background-radius: 1em;" />
+               </HBox>
+               <TextField fx:id="studentsCountField" prefHeight="27.0" prefWidth="334.0" promptText="Введите количество студентов" style="-fx-background-radius: 1em;" />
+               <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                  <ComboBox fx:id="formOfEducationComboBox" onAction="#dataValidation" prefHeight="27.0" prefWidth="327.0" promptText="Выберите форму обучения" />
+                  <ComboBox fx:id="semesterComboBox" onAction="#dataValidation" prefHeight="27.0" prefWidth="326.0" promptText="Выберите семестр" />
+               </VBox>
+            </VBox>
+         </TitledPane>
+         <TitledPane fx:id="aboutGroupAdminTitledPane" disable="true" layoutX="410.0" layoutY="100.0" prefHeight="214.0" prefWidth="332.0" text="Информация о админе группы">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <TextField fx:id="adminGroupField" prefHeight="27.0" prefWidth="334.0" promptText="Введите имя админа группы" style="-fx-background-radius: 1em;" />
+               <TextField fx:id="adminHeightField" prefHeight="27.0" prefWidth="334.0" promptText="Введите рост админа (целое число)" style="-fx-background-radius: 1em;" />
+               <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                  <ComboBox fx:id="adminEyeColorComboBox" onAction="#dataValidation" prefHeight="27.0" prefWidth="326.0" promptText="Введите цвет глаз админа" />
+                  <ComboBox fx:id="adminHairColorComboBox" onAction="#dataValidation" prefHeight="27.0" prefWidth="326.0" promptText="Введите цвет волос админа" />
+                  <ComboBox fx:id="adminNationalityComboBox" onAction="#dataValidation" prefHeight="27.0" prefWidth="326.0" promptText="Введите национальность админа" />
+               </VBox>
+            </VBox>
+         </TitledPane>
+         <ComboBox fx:id="commandChoiseComboBox" layoutX="50.0" layoutY="18.0" onAction="#commandProcessing" prefHeight="27.0" prefWidth="691.0" promptText="Выберите команду" />
+         <Button fx:id="executeCommandBtn" disable="true" layoutX="50.0" layoutY="350.0" mnemonicParsing="false" onAction="#sendCommand" prefHeight="39.0" prefWidth="692.0" text="Выполнить" />
+         <TextField fx:id="idArgumentField" disable="true" layoutX="50.0" layoutY="65.0" prefHeight="27.0" prefWidth="688.0" promptText="Введите id элемента (целое положительное число)" />
+      </Pane>
+      <Pane fx:id="aboutFagots" visible="false">
+         <Text fx:id="aboutFagotsText" fontSmoothingType="LCD" layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Примите лабу пожалуйста">
+            <font>
+               <Font size="47.0" />
+            </font>
+         </Text>
+      </Pane>
+   </Pane>
+</AnchorPane>

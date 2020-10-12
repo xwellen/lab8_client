@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.RegistrationController">
+   <Pane prefHeight="82.0" style="-fx-background-color: #e57f31#e57f31;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="79.0" fitWidth="103.0" layoutX="23.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Smart.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="116.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Study" wrappingWidth="90.24800109863281">
+         <font>
+            <Font name="Avenir Next Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="139.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grou" wrappingWidth="90.24800109863281">
+         <font>
+            <Font name="Avenir Next Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="194.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P" wrappingWidth="90.24800109863281">
+         <font>
+            <Font name="Avenir Next Bold" size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="213.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="roject" wrappingWidth="90.24800109863281">
+         <font>
+            <Font name="Avenir Next Bold" size="24.0" />
+         </font>
+      </Text>
+   </Pane>
+   <Pane style="-fx-background-color: #293541#293541;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0">
+      <Button fx:id="setRu" layoutX="90.0" layoutY="10.0" mnemonicParsing="false" onAction="#setRuLanguage" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@Images/Flags/russia-flag-16x16.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="setFr" layoutX="125.0" layoutY="12.0" mnemonicParsing="false" onAction="#setFrLanguage" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@Images/Flags/france-flag-icon-16.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="setNo" layoutX="160.0" layoutY="12.0" mnemonicParsing="false" onAction="#setNoLanguage" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@Images/Flags/norway-flag-icon-16.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="setEsNI" layoutX="195.0" layoutY="12.0" mnemonicParsing="false" onAction="#setEsNILanguage" prefHeight="16.0" prefWidth="16.0" style="-fx-background-color: transparent;" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@Images/Flags/nicaragua-flag-icon-16.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <VBox layoutX="30.0" layoutY="54.0" spacing="15">
+         <TextField fx:id="newLoginField" prefHeight="27.0" prefWidth="293.0" promptText="Придумайте логин" style="-fx-background-radius: 1em;" />
+         <PasswordField fx:id="newPasswordField" prefHeight="27.0" prefWidth="293.0" promptText="Придумайте пароль" style="-fx-background-radius: 1em;" />
+         <PasswordField fx:id="repNewPasswordField" prefHeight="27.0" prefWidth="293.0" promptText="Повторите пароль" style="-fx-background-radius: 1em;" />
+         <Button fx:id="regUserBtn" mnemonicParsing="false" onAction="#regUserAction" prefHeight="40.0" prefWidth="293.0" style="-fx-background-radius: 1em; -fx-background-color: #e57f31#e57f31 #e57f31#e57f31;" text="Зарегистрироваться" />
+         <Button fx:id="authUserWindowBtn" alignment="CENTER" graphicTextGap="12.0" mnemonicParsing="false" onAction="#displayAuthWindow" prefHeight="40.0" prefWidth="293.0" style="-fx-background-radius: 1em; -fx-background-color: #e57f31#e57f31 #e57f31#e57f31;" text="Авторизация" />
+      </VBox>
+   </Pane>
+</AnchorPane>
