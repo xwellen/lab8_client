@@ -1,5 +1,6 @@
 import Client.ClientModule;
 import Client.DecryptingImp;
+import GUI.Controllers.AuthController;
 import GUI.Controllers.HiPanelController;
 import Interfaces.CommandReceiver;
 import com.google.inject.Guice;
@@ -23,12 +24,12 @@ public class Main extends Application {
         Injector injector = Guice.createInjector(new ClientModule());
         CommandReceiver commandReceiver = injector.getInstance(CommandReceiver.class);
 
-        FXMLLoader loader = new FXMLLoader(DecryptingImp.class.getResource("/GUI/Views/HiPanel.fxml"));
+        FXMLLoader loader = new FXMLLoader(DecryptingImp.class.getResource("/GUI/Views/Auth.fxml"));
         Parent root = loader.load();
-        HiPanelController ctrl = (loader.getController());
+        AuthController ctrl = (loader.getController());
         ctrl.setCommandReceiver(commandReceiver);
         ctrl.setPrimaryStage(primaryStage);
-        primaryStage.setTitle("StudyGroupProject");
+        primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(root, 350, 350));
         primaryStage.show();
 
